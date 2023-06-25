@@ -20,8 +20,8 @@ SELECT
   'PyCon 2023' as title, 
   id as organizer, 
   'Join us for PyCon 2023, the annual gathering of Python enthusiasts. This event will feature keynote speeches, technical sessions, workshops, and networking opportunities' as description, 
-  TIMESTAMP '2023-05-30 10:00:00' as start_date, 
-  TIMESTAMP '2023-05-31 19:00:00' as end_date 
+  TIMESTAMP '2023-07-30 10:00:00' as start_date, 
+  TIMESTAMP '2023-07-31 19:00:00' as end_date 
 FROM 
   person 
 LIMIT 
@@ -47,18 +47,18 @@ SELECT
     WHEN ROW_NUMBER() OVER () = 5 THEN 'Python Machine Learning: This talk explores the field of machine learning using Python, showcasing libraries like TensorFlow, Keras, or scikit-learn. It covers topics such as supervised and unsupervised learning, model training and evaluation, and applying machine learning algorithms to real-world problems.'
   END AS description,
   CASE
-    WHEN ROW_NUMBER() OVER () = 1 THEN TIMESTAMP '2023-05-30 10:00:00'
-    WHEN ROW_NUMBER() OVER () = 2 THEN TIMESTAMP '2023-05-30 11:00:00'
-    WHEN ROW_NUMBER() OVER () = 3 THEN TIMESTAMP '2023-05-30 12:00:00'
-    WHEN ROW_NUMBER() OVER () = 4 THEN TIMESTAMP '2023-05-30 13:00:00'
-    WHEN ROW_NUMBER() OVER () = 5 THEN TIMESTAMP '2023-05-30 14:00:00'
+    WHEN ROW_NUMBER() OVER () = 1 THEN TIMESTAMP '2023-07-30 10:00:00'
+    WHEN ROW_NUMBER() OVER () = 2 THEN TIMESTAMP '2023-07-30 11:00:00'
+    WHEN ROW_NUMBER() OVER () = 3 THEN TIMESTAMP '2023-07-30 12:00:00'
+    WHEN ROW_NUMBER() OVER () = 4 THEN TIMESTAMP '2023-07-30 13:00:00'
+    WHEN ROW_NUMBER() OVER () = 5 THEN TIMESTAMP '2023-07-30 14:00:00'
   END AS start_date,
   CASE
-    WHEN ROW_NUMBER() OVER () = 1 THEN TIMESTAMP '2023-05-30 10:50:00'
-    WHEN ROW_NUMBER() OVER () = 2 THEN TIMESTAMP '2023-05-30 11:50:00'
-    WHEN ROW_NUMBER() OVER () = 3 THEN TIMESTAMP '2023-05-30 12:50:00'
-    WHEN ROW_NUMBER() OVER () = 4 THEN TIMESTAMP '2023-05-30 13:50:00'
-    WHEN ROW_NUMBER() OVER () = 5 THEN TIMESTAMP '2023-05-30 14:50:00'
+    WHEN ROW_NUMBER() OVER () = 1 THEN TIMESTAMP '2023-07-30 10:50:00'
+    WHEN ROW_NUMBER() OVER () = 2 THEN TIMESTAMP '2023-07-30 11:50:00'
+    WHEN ROW_NUMBER() OVER () = 3 THEN TIMESTAMP '2023-07-30 12:50:00'
+    WHEN ROW_NUMBER() OVER () = 4 THEN TIMESTAMP '2023-07-30 13:50:00'
+    WHEN ROW_NUMBER() OVER () = 5 THEN TIMESTAMP '2023-07-30 14:50:00'
   END AS end_date
 FROM
   meetup
